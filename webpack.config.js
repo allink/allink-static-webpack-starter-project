@@ -41,13 +41,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(svg|png|jpg|gif)$/i,
         use: [
           {
             loader: 'url-loader',
             options: {
-              limit: 10000,
-              mimetype: 'image/svg+xml'
+              limit: 10000
             }
           }
         ]
